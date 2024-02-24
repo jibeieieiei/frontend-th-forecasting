@@ -2,10 +2,9 @@
   color: #ffffff;
   display: flex;
   height: 80px;
-  /* justify-content: space-between; */
 }
 .number {
-  margin-left: 92px;
+  margin-left: 100px;
   height: 20px;
   margin-top: 15px;
   text-align: end;
@@ -14,12 +13,13 @@
 .auto-complete {
   width: 362px;
   text-align: end;
-  margin-right: 18px;
-  margin-left: 38px;
+  margin-right: 20px;
+  margin-left: 60px;
 }
 .search-form {
   display: flex;
   justify-content: end;
+  /* width: 167px; */
 }
 .ant-select .ant-select-arrow {
   color: #ffffff;
@@ -34,7 +34,7 @@
 }
 .delete-button {
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 34px;
   margin-top: 11px;
 }
 

@@ -211,16 +211,16 @@ function Search({ setShowData, setIsForecast }) {
           >
             <Select
               style={{
-                width: 230,
+                width: 250,
                 height: 48,
-                marginLeft: 20,
+                marginLeft: 46.75,
                 borderRadius: 4,
               }}
               onChange={(value, index) => {
                 handleChange(index)
               }}
               dropdownStyle={{
-                width: 230,
+                width: 250,
                 border: '1px solid #FFFFFF',
                 borderRadius: '4px',
               }}
@@ -238,12 +238,12 @@ function Search({ setShowData, setIsForecast }) {
               ]}
             />
             <Select
-              style={{ width: 230, height: 48, marginLeft: 20 }}
+              style={{ width: 250, height: 48, marginLeft: 46.75 }}
               onChange={(value, index) => {
                 handleChange(index)
               }}
               dropdownStyle={{
-                width: 230,
+                width: 250,
                 border: '1px solid #FFFFFF',
               }}
               placeholder="Choose model"
@@ -253,12 +253,12 @@ function Search({ setShowData, setIsForecast }) {
               ]}
             />
             <Select
-              style={{ width: 230, height: 48, marginLeft: 20 }}
+              style={{ width: 250, height: 48, marginLeft: 46.75 }}
               onChange={(value, index) => {
                 handleChange(index)
               }}
               dropdownStyle={{
-                width: 230,
+                width: 250,
                 border: '1px solid #FFFFFF',
               }}
               placeholder="Choose strategy"
@@ -273,12 +273,12 @@ function Search({ setShowData, setIsForecast }) {
               ]}
             />
             <Select
-              style={{ width: 230, height: 48, marginLeft: 20 }}
+              style={{ width: 280, height: 48, marginLeft: 46.75 }}
               onChange={(value, index) => {
                 handleChange(index)
               }}
               dropdownStyle={{
-                width: 230,
+                width: 280,
                 border: '1px solid #FFFFFF',
               }}
               placeholder="Choose stop loss/ take profit"
