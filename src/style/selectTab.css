@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  margin-top: 48px;
+  margin-bottom: 96px;
+}
+.thai-stock {
+  display: block;
+  width: 360px;
+  color: #ffffff;
+  text-align: end;
+  font-size: 28px;
+}
+.tab-menu {
+  display: block;
+  width: 414px;
+}
+.select-tab {
+  display: flex;
+  border-radius: 48px;
+  background-color: #050d19;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  width: 314px;
+}
+.tab-active {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 16px 32px 16px;
+  border-radius: 999px;
+  background-color: #ffffff;
+}
+.tab {
+  font-size: 16px;
+  border: none;
+  padding: 16px 32px 16px;
+  cursor: pointer;
+  background-color: #050d19;
+  color: #ffffff;
+}
