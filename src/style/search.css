@@ -14,7 +14,7 @@
   width: 362px;
   text-align: end;
   margin-right: 20px;
-  margin-left: 60px;
+  margin-left: 75px;
 }
 .search-form {
   display: flex;
@@ -48,6 +48,14 @@
   color: #ffffff;
   border: transparent;
   cursor: pointer;
+  font-size: 16px;
+  margin-left: 92px;
+}
+.disable-add {
+  background-color: transparent;
+  color: #696e75;
+  border: transparent;
+  /* cursor: pointer; */
   font-size: 16px;
   margin-left: 92px;
 }

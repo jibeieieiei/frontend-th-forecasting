@@ -211,7 +211,7 @@ function Search({ setShowData, setIsForecast }) {
           >
             <Select
               style={{
-                width: 250,
+                width: 260,
                 height: 48,
                 marginLeft: 46.75,
                 borderRadius: 4,
@@ -220,7 +220,7 @@ function Search({ setShowData, setIsForecast }) {
                 handleChange(index)
               }}
               dropdownStyle={{
-                width: 250,
+                width: 260,
                 border: '1px solid #FFFFFF',
                 borderRadius: '4px',
               }}
@@ -238,12 +238,12 @@ function Search({ setShowData, setIsForecast }) {
               ]}
             />
             <Select
-              style={{ width: 250, height: 48, marginLeft: 46.75 }}
+              style={{ width: 260, height: 48, marginLeft: 46.75 }}
               onChange={(value, index) => {
                 handleChange(index)
               }}
               dropdownStyle={{
-                width: 250,
+                width: 260,
                 border: '1px solid #FFFFFF',
               }}
               placeholder="Choose model"
@@ -253,12 +253,12 @@ function Search({ setShowData, setIsForecast }) {
               ]}
             />
             <Select
-              style={{ width: 250, height: 48, marginLeft: 46.75 }}
+              style={{ width: 260, height: 48, marginLeft: 46.75 }}
               onChange={(value, index) => {
                 handleChange(index)
               }}
               dropdownStyle={{
-                width: 250,
+                width: 260,
                 border: '1px solid #FFFFFF',
               }}
               placeholder="Choose strategy"
@@ -267,7 +267,7 @@ function Search({ setShowData, setIsForecast }) {
                   name: 'strategy',
                   i: i,
                   value: 'EMACROSS',
-                  label: 'EMA GOLDENCROSS',
+                  label: 'EMA Golden Cross',
                 },
                 { name: 'strategy', i: i, value: 'RSI', label: 'RSI' },
               ]}
@@ -281,31 +281,31 @@ function Search({ setShowData, setIsForecast }) {
                 width: 280,
                 border: '1px solid #FFFFFF',
               }}
-              placeholder="Choose stop loss/ take profit"
+              placeholder="Choose Stop Loss/ Take Profit"
               options={[
                 {
                   name: 'stop-loss',
                   i: i,
                   value: '0',
-                  label: 'stop loss 0/ take profit 0',
+                  label: 'Stop Loss 0/ Take Profit 0',
                 },
                 {
                   name: 'stop-loss',
                   i: i,
                   value: '2',
-                  label: 'stop loss 2/ take profit 4',
+                  label: 'Stop Loss 2/ Take Profit 4',
                 },
                 {
                   name: 'stop-loss',
                   i: i,
                   value: '4',
-                  label: 'stop loss 4/ take profit 8',
+                  label: 'Stop Loss 4/ Take Profit 8',
                 },
                 {
                   name: 'stop-loss',
                   i: i,
                   value: '6',
-                  label: 'stop loss 6/ take profit 12',
+                  label: 'Stop Loss 6/ Take Profit 12',
                 },
               ]}
             />
@@ -328,7 +328,10 @@ function Search({ setShowData, setIsForecast }) {
     <div>
       {showSearch()}
       <div className="option-search">
-        <button className="add-compare" onClick={handleIncrease}>
+        <button
+          className={number === 5 ? 'disable-add' : 'add-compare'}
+          onClick={handleIncrease}
+        >
           + Compare Stock
         </button>
         <button className="forecast-button" onClick={handleForecast}>
