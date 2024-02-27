@@ -56,11 +56,13 @@ function BacktestModel({
         data: testData,
         type: 'line',
         smooth: true,
+        color: '#A2D08C',
       },
       {
         data: predictData,
         type: 'line',
         smooth: true,
+        color: '#56C2EA',
       },
     ],
     dataZoom: [
@@ -95,7 +97,21 @@ function BacktestModel({
   }
   return (
     <div>
-      {mse}
+      <div className="backtest-tag">Backtest</div>
+
+      <div className="backtest-label">
+        <div>Model</div>
+
+        <div className="mse-tag">
+          <div className="backtest-dot">
+            <span className="test-dot"></span>
+            Test Price
+            <span className="predict-dot"></span>
+            Predict Price
+          </div>
+          MSE <span>{mse}</span>
+        </div>
+      </div>
       <EChartsReact option={option} />
     </div>
   )

@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import EChartsReact from 'echarts-for-react'
 import PropTypes from 'prop-types'
+import '../../style/charts.css'
 function PricePredict({
   model = 'ARIMA',
   timeframe = '15T',
@@ -55,11 +56,13 @@ function PricePredict({
         data: [...nullArray, ...predictPrice],
         type: 'line',
         smooth: true,
+        color: '#3083FF',
       },
       {
         data: actualPrice,
         type: 'line',
         smooth: true,
+        color: '#83b5ff',
       },
     ],
     dataZoom: [
@@ -94,6 +97,15 @@ function PricePredict({
   }
   return (
     <div>
+      <div className="prediction-label">
+        <div className="prediction-name">Prediction</div>
+        <div className="prediction-dot">
+          <span className="dot-actually"></span>
+          Actually Price
+          <span className="dot-predict"></span>
+          Prediction Price
+        </div>
+      </div>
       <EChartsReact option={option} />
     </div>
   )

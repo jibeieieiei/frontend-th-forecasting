@@ -1,0 +1,51 @@
+.compare-table {
+  display: flex;
+  color: #ffffff;
+  justify-content: flex-end;
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+.button-compare {
+  display: flex;
+  margin-right: 100px;
+  justify-items: center;
+}
+.button-compare > button {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.button-compare > img {
+  cursor: pointer;
+}
+
+.button-compare-back {
+  position: relative;
+  left: 39px;
+  top: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+.table-stock {
+  height: 685px;
+  width: 1250px;
+  box-shadow: 8px 8px 48px 0px #abbed11a;
+  padding-top: 30px;
+  border-radius: 24px 0px 0px 24px;
+}
+:where(.css-dev-only-do-not-override-zeibf).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before,
+:where(.css-dev-only-do-not-override-zeibf).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > td:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before {
+  background-color: transparent;
+}

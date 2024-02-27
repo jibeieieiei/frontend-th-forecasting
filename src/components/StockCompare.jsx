@@ -5,9 +5,21 @@ import BacktestStrategy from './Forecasting/BacktestStrategy'
 import BacktestListOfTrade from './Forecasting/BacktestListOfTrade'
 import BacktestStats from './Forecasting/BacktestStats'
 import Background from './Forecasting/Background'
-function StockCompare({ symbol, timeframe, model, strategy, stopLoss }) {
+import './../style/stockCompare.css'
+function StockCompare({
+  indexSymbol,
+  symbol,
+  timeframe,
+  model,
+  strategy,
+  stopLoss,
+}) {
   return (
-    <div>
+    <div className="stock-info">
+      <div className="symbol-header">
+        <div className="symbol-name">{symbol}</div>
+        <div className="symbol-index">{indexSymbol}</div>
+      </div>
       <PricePredict symbol={symbol} timeframe={timeframe} model={model} />
       <BacktestModel symbol={symbol} timeframe={timeframe} model={model} />
       <BacktestStrategy
@@ -34,6 +46,7 @@ function StockCompare({ symbol, timeframe, model, strategy, stopLoss }) {
   )
 }
 StockCompare.propTypes = {
+  indexSymbol: PropTypes.string,
   symbol: PropTypes.string,
   timeframe: PropTypes.string,
   model: PropTypes.string,

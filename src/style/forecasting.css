@@ -4,3 +4,7 @@
   height: 100vh;
   overflow: scroll;
 }
+.stock-compare-block {
+  display: flex;
+  justify-content: center;
+}
