@@ -135,6 +135,7 @@ function BacktestListOfTrade({
               width: 'calc(100%/1.22)',
               marginLeft: 'calc(100% / 11.87)',
               marginRight: 'calc(100% / 9.98)',
+              minHeight: 376,
               marginTop: 32,
               borderRadius: 8,
             }}
