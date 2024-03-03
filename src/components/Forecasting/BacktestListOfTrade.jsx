@@ -16,7 +16,9 @@ function BacktestListOfTrade({
   const [history, setHistory] = useState([])
   const columns = [
     {
-      title: 'Direction',
+      title: () => {
+        return <div style={{ width: 67 }}> Direction </div>
+      },
       dataIndex: 'direction',
       key: 'direction',
     },
@@ -36,7 +38,9 @@ function BacktestListOfTrade({
       key: 'price',
     },
     {
-      title: 'Return',
+      title: () => {
+        return <div style={{ width: 50 }}> Return </div>
+      },
       dataIndex: 'return',
       key: 'return',
     },
@@ -47,21 +51,58 @@ function BacktestListOfTrade({
       render(text) {
         return {
           props: {
-            style: { color: text === 'Buy' ? '#ACCDFF' : '#3083FF' },
+            style: {
+              color: text === 'Buy' ? '#ACCDFF' : '#3083FF',
+            },
           },
           children: <div>{text}</div>,
         }
       },
     },
     {
-      title: 'Signal Index',
+      title: () => {
+        return (
+          <div style={{ position: 'relative', right: 16, width: 50 }}>
+            {' '}
+            Signal Index{' '}
+          </div>
+        )
+      },
       dataIndex: 'signal_index',
       key: 'signal_index',
+      render(text) {
+        return {
+          props: {
+            style: {
+              // display: 'flex',
+              // overflowX: 'scroll',
+              fontSize: 13,
+              padding: 0,
+              position: 'relative',
+              // marginBottom: 20,
+              // left: 10,
+            },
+          },
+          children: <div>{text.replace('+07:00', '')}</div>,
+        }
+      },
     },
     {
-      title: 'Status',
+      title: () => {
+        return <div style={{ width: 50 }}> Status </div>
+      },
       dataIndex: 'status',
       key: 'status',
+      render(text) {
+        return {
+          props: {
+            style: {
+              padding: 15,
+            },
+          },
+          children: <div>{text}</div>,
+        }
+      },
     },
     {
       title: 'Stop Type',
