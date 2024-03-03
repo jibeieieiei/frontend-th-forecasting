@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { Table } from 'react-bootstrap'
+import '../../style/statistics.css'
 
 function BacktestStats({
   strategy = 'EMACROSS',
@@ -29,27 +29,34 @@ function BacktestStats({
     }, [])
   }
   GetStats()
-
   // ---- Function ----
+  const isInteger = (index) => {
+    switch (index) {
+      case 'Start':
+      case 'End':
+      case 'Period':
+      case 'Total Orders':
+      case 'Total Trades':
+        return true
+      default:
+        return false
+    }
+  }
   const value = stats.map((item) => (
-    <tr key={item.index + item[symbol + '_stats']}>
-      <td>{item.index}</td>
-      <td>{item[symbol + '_stats']}</td>
-    </tr>
+    <div key={item.index + item[symbol + '_stats']} className="stats-content">
+      <div className="stats-index">{item.index}</div>
+      <div>
+        {isInteger(item.index)
+          ? item[symbol + '_stats'].replace('.00', '')
+          : item[symbol + '_stats']}
+      </div>
+    </div>
   ))
 
   return (
-    <div>
-      BacktestStats
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>{symbol} Stats</th>
-          </tr>
-        </thead>
-        <tbody>{value}</tbody>
-      </Table>
+    <div className="statistics">
+      <div className="stats-header">Statistics</div>
+      <div className="stats-body">{value}</div>
     </div>
   )
 }

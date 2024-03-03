@@ -2,6 +2,7 @@
   color: #ffffff;
   display: flex;
   height: 80px;
+  margin-right: 100px;
 }
 .number {
   margin-left: 100px;

@@ -8,3 +8,11 @@
   display: flex;
   justify-content: center;
 }
+.stock-compare-multi {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow: scroll;
+  margin-left: 100px;
+}

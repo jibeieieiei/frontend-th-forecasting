@@ -1,0 +1,34 @@
+.statistics {
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+}
+.stats-header {
+  margin-left: calc(100% / 11.87);
+  margin-bottom: 32px;
+  font-size: 20px;
+}
+.stats-body {
+  display: flex;
+  width: calc(100% / 1.22);
+  margin-left: calc(100% / 11.87);
+  margin-right: calc(100% / 9.98);
+  border: 1px solid white;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  padding: 48px;
+  gap: 56px;
+}
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid white; */
+  width: calc(100% / 7.87);
+  gap: 8px;
+  text-align: start;
+  font-size: 18px;
+}
+.stats-content .stats-index {
+  color: #cdcfd1;
+  font-size: 14px;
+}

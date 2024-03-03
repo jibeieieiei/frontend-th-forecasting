@@ -9,6 +9,7 @@ function BacktestStrategy({
   symbol = 'ADVANC',
   col = 'Close',
   stopLoss = '2',
+  isShow,
 }) {
   // ---- useState ----
   const [date, setDate] = useState([])
@@ -84,7 +85,7 @@ function BacktestStrategy({
         xAxisIndex: [0],
         start: 98,
         end: 100,
-        backgroundColor: 'rgba(47,69,84)',
+        backgroundColor: '#373D47',
       },
       {
         type: 'slider',
@@ -109,8 +110,8 @@ function BacktestStrategy({
     ],
   }
   return (
-    <div>
-      <EChartsReact option={option} />
+    <div className="strategy-charts">
+      {isShow && <EChartsReact option={option} />}
     </div>
   )
 }
@@ -120,5 +121,6 @@ BacktestStrategy.propTypes = {
   symbol: PropTypes.string,
   col: PropTypes.string,
   stopLoss: PropTypes.string,
+  isShow: PropTypes.bool,
 }
 export default BacktestStrategy

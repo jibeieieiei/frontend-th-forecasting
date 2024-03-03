@@ -2,11 +2,16 @@
 .stock-info {
   display: flex;
   flex-direction: column;
-  width: 1933px;
-  height: 2785px;
+  /* width: 1706px; */
+  height: 2700px;
+  /* max-height: 2600px; */
+  margin-bottom: 100px;
   color: #ffffff;
   background-color: #111824;
   box-shadow: 0px 8px 48px 0px #50565e40;
+  /* margin-left: 100px; */
+  margin-right: 50px;
+  border-radius: 16px;
 }
 .symbol-header {
   display: flex;
@@ -20,4 +25,41 @@
 }
 .symbol-index {
   font-size: 20px;
+}
+
+/* Select Tab Strategy and lot */
+.select-tab-backtest {
+  display: flex;
+  margin-top: 64px;
+  margin-left: calc(100% / 11.87);
+}
+.strategy-lot-button-active {
+  width: 123px;
+  font-size: 20px;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid;
+  border-image-source: linear-gradient(270deg, #3083ff 0%, #ffffff 100%);
+  border-image-slice: 25;
+  padding-bottom: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+}
+.strategy-lot-button-inactive {
+  width: 123px;
+  font-size: 20px;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid;
+  border-color: #373d47;
+  border-image-slice: 25;
+  padding-bottom: 8px;
+  color: #9b9ea3;
+  cursor: pointer;
+  text-align: center;
 }

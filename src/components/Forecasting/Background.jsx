@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import '../../style/stockBackground.css'
 function Background({ symbol = 'ADVANC' }) {
   // ---- useState ----
   const [fullname, setFullname] = useState('')
@@ -24,9 +25,10 @@ function Background({ symbol = 'ADVANC' }) {
   }
   GetBackground()
   return (
-    <div>
-      <div>{fullname}</div>
-      {business}
+    <div className="stock-bg">
+      <div className="stock-bg-header">Stock Background</div>
+      <div className="stock-bg-fullname">{fullname}</div>
+      <div className="stock-bg-business">{business}</div>
     </div>
   )
 }
