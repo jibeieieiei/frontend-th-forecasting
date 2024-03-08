@@ -1,9 +1,14 @@
+@font-face {
+  font-family: 'plus';
+  src: local('plus'),
+    url('../font/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+}
 .forecasting-page {
   /* background-color: #ffffff; */
   background-color: #050d19;
   height: 100vh;
   overflow: scroll;
-  font-family: Plus Jakarta Sans;
+  font-family: 'plus';
 }
 .stock-compare-block {
   display: flex;
