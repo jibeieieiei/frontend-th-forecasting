@@ -72,7 +72,7 @@ function BacktestListOfTrade({
     {
       title: () => {
         return (
-          <div style={{ position: 'relative', right: 16, width: 50 }}>
+          <div style={{ position: 'relative', right: 25, width: 100 }}>
             {' '}
             Signal Index{' '}
           </div>
@@ -84,13 +84,10 @@ function BacktestListOfTrade({
         return {
           props: {
             style: {
-              // display: 'flex',
-              // overflowX: 'scroll',
+              position: 'relative',
+              right: 10,
               fontSize: 13,
               padding: 0,
-              position: 'relative',
-              // marginBottom: 20,
-              // left: 10,
             },
           },
           children: <div>{text.replace('+07:00', '')}</div>,
