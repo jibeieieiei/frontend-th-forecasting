@@ -1,4 +1,52 @@
+@font-face {
+  font-family: 'plus';
+  src: local('plus'),
+    url('../font/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+}
 .information-page {
   background-color: #050d19;
   height: 100vh;
+  overflow: scroll;
+  font-family: 'plus';
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  margin-right: 100px;
+  justify-content: space-between;
+  gap: 72px;
+}
+.arima-container,
+.lstm-container,
+.rsi-container,
+.ema-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 2.15);
+  padding: 56px;
+  border-radius: 16px;
+  gap: 72px;
+  background-color: #111824;
+}
+.arima-header,
+.lstm-header,
+.rsi-header,
+.ema-header {
+  font-size: 36px;
+  font-weight: 600;
+  background: linear-gradient(270deg, #3083ff 0%, #ffffff 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.arima-info,
+.lstm-info,
+.rsi-info,
+.ema-info {
+  font-size: 18px;
+  font-weight: 400;
 }

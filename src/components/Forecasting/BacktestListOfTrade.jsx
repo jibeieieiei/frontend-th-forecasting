@@ -36,6 +36,16 @@ function BacktestListOfTrade({
       title: 'Price',
       dataIndex: 'price',
       key: 'price',
+      render(text) {
+        return {
+          props: {
+            style: {
+              padding: 10,
+            },
+          },
+          children: <div>{text}</div>,
+        }
+      },
     },
     {
       title: () => {
