@@ -287,7 +287,7 @@ function Search({ setShowData, setIsForecast }) {
                   name: 'stop-loss',
                   i: i,
                   value: '0',
-                  label: 'Stop Loss 0/ Take Profit 0',
+                  label: 'No Stop Loss / No Take Profit',
                 },
                 {
                   name: 'stop-loss',

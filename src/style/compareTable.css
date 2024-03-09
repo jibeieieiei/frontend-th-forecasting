@@ -23,17 +23,27 @@
 
 .button-compare-back {
   position: relative;
-  left: 39px;
-  top: 50px;
+  left: -1211px;
+  top: 79px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
+}
+.table-stock-compare {
+  position: relative;
+  /* top: 20px; */
+  /* left: -600px; */
 }
 .table-stock {
+  position: absolute;
   height: 685px;
   width: 1250px;
+  right: 6px;
+  top: 60px;
+  z-index: 2;
   box-shadow: 8px 8px 48px 0px #abbed11a;
-  padding-top: 30px;
+  /* padding-top: 30px; */
   border-radius: 24px 0px 0px 24px;
+  background-color: #050d19;
 }
 :where(.css-dev-only-do-not-override-zeibf).ant-table-wrapper
   .ant-table-thead
@@ -48,4 +58,8 @@
     .ant-table-row-expand-icon-cell
   ):not([colspan])::before {
   background-color: transparent;
+}
+:where(.css-dev-only-do-not-override-zeibf).ant-table-wrapper
+  .ant-table-pagination.ant-pagination {
+  background-color: #050d19;
 }

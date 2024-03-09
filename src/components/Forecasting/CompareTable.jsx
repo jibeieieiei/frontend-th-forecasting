@@ -73,31 +73,31 @@ function CompareTable(props) {
         </div>
       )}
       {modal && (
-        <div className="button-compare-back" onClick={toggleModal}>
-          <img src={rightLogo} width={20} height={20} />
-        </div>
-      )}
-      {modal && (
-        <div className="table-stock">
-          <ConfigProvider
-            theme={{
-              components: {
-                Table: {
-                  colorBgContainer: '#050D19',
-                  colorText: '#ffffff',
-                  colorTextHeading: '#ffffff',
-                  footerColor: '#000000',
+        <div className="table-stock-compare">
+          <div className="button-compare-back" onClick={toggleModal}>
+            <img src={rightLogo} width={20} height={20} />
+          </div>
+          <div className="table-stock">
+            <ConfigProvider
+              theme={{
+                components: {
+                  Table: {
+                    colorBgContainer: '#050D19',
+                    colorText: '#ffffff',
+                    colorTextHeading: '#ffffff',
+                    footerColor: '#000000',
+                  },
                 },
-              },
-              token: {
-                colorPrimary: '#000000',
-                colorText: '#FFFFFF',
-                lineWidth: 0,
-              },
-            }}
-          >
-            <Table columns={columns} dataSource={data} />
-          </ConfigProvider>
+                token: {
+                  colorPrimary: '#000000',
+                  colorText: '#FFFFFF',
+                  lineWidth: 0,
+                },
+              }}
+            >
+              <Table columns={columns} dataSource={data} />
+            </ConfigProvider>
+          </div>
         </div>
       )}
     </div>
