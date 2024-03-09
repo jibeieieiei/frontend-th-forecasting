@@ -9,10 +9,10 @@
 }
 .thai-stock {
   display: block;
-  width: 360px;
   color: #ffffff;
   text-align: end;
   font-size: 28px;
+  margin-left: 100px;
 }
 .tab-menu {
   display: block;
