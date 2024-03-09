@@ -8,7 +8,6 @@ function Forecasting() {
   // ---- useState ----
   const [showData, setShowData] = useState([])
   const [isForecast, setIsForecast] = useState(false)
-  console.log('showData', showData)
   useEffect(() => {
     const data = localStorage.getItem('compare')
     if (data === null) {

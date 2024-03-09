@@ -20,15 +20,25 @@ function Search({ setShowData, setIsForecast }) {
   ])
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('compare'))
-    if (compare !== data) {
-      setCompare(data)
-      console.log('done!!')
-      setIsForecast(true)
-      setShowData(data)
+    const minLength =
+      compare.length < data.length ? compare.length : data.length
+    for (let i = 0; i < minLength; i++) {
+      if (
+        compare.length !== data.length ||
+        compare[i].symbol !== data[i].symbol ||
+        compare[i].timeframe !== data[i].timeframe ||
+        compare[i].strategy !== data[i].strategy ||
+        compare[i].model !== data[i].model ||
+        compare[i].stopLoss !== data[i].stopLoss
+      ) {
+        setCompare(data)
+        setIsForecast(true)
+        setShowData(data)
+      }
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  console.log('compare', compare)
   // API Call
   const STOCKS = 'http://127.0.0.1:8000/stocks_symbols'
   const StocksName = () => {
