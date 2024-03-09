@@ -18,6 +18,17 @@ function Search({ setShowData, setIsForecast }) {
       stopLoss: '',
     },
   ])
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('compare'))
+    if (compare !== data) {
+      setCompare(data)
+      console.log('done!!')
+      setIsForecast(true)
+      setShowData(data)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  console.log('compare', compare)
   // API Call
   const STOCKS = 'http://127.0.0.1:8000/stocks_symbols'
   const StocksName = () => {
@@ -46,6 +57,7 @@ function Search({ setShowData, setIsForecast }) {
     event.preventDefault()
     setShowData(compare)
     setIsForecast(true)
+    localStorage.setItem('compare', JSON.stringify(compare))
   }
 
   const handleIncrease = () => {
@@ -236,6 +248,7 @@ function Search({ setShowData, setIsForecast }) {
                 { name: 'timeframe', i: i, value: '4H', label: '4 hours' },
                 { name: 'timeframe', i: i, value: '1D', label: '1 day' },
               ]}
+              value={compare[i].timeframe ? compare[i].timeframe : null}
             />
             <Select
               style={{ width: 260, height: 48, marginLeft: 46.75 }}
@@ -251,6 +264,7 @@ function Search({ setShowData, setIsForecast }) {
                 { name: 'model', i: i, value: 'ARIMA', label: 'ARIMA' },
                 { name: 'model', i: i, value: 'LSTM', label: 'LSTM' },
               ]}
+              value={compare[i].model ? compare[i].model : null}
             />
             <Select
               style={{ width: 260, height: 48, marginLeft: 46.75 }}
@@ -271,6 +285,7 @@ function Search({ setShowData, setIsForecast }) {
                 },
                 { name: 'strategy', i: i, value: 'RSI', label: 'RSI' },
               ]}
+              value={compare[i].strategy ? compare[i].strategy : null}
             />
             <Select
               style={{ width: 280, height: 48, marginLeft: 46.75 }}
@@ -308,6 +323,7 @@ function Search({ setShowData, setIsForecast }) {
                   label: 'Stop Loss 6/ Take Profit 12',
                 },
               ]}
+              value={compare[i].stopLoss ? compare[i].stopLoss : null}
             />
           </ConfigProvider>
         </div>

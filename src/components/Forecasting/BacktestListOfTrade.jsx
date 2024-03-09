@@ -145,8 +145,6 @@ function BacktestListOfTrade({
             }
             return local
           })
-
-          console.log(dataTemp)
           setHistory(dataTemp)
         } catch (error) {
           console.log('Error fetching Data:', error)

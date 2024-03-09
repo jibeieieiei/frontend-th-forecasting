@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SelectTab from '../../components/SelectTab'
 import Search from '../../components/Forecasting/Search'
 import StockCompare from '../../components/StockCompare'
@@ -8,6 +8,24 @@ function Forecasting() {
   // ---- useState ----
   const [showData, setShowData] = useState([])
   const [isForecast, setIsForecast] = useState(false)
+  console.log('showData', showData)
+  useEffect(() => {
+    const data = localStorage.getItem('compare')
+    if (data === null) {
+      localStorage.setItem(
+        'compare',
+        JSON.stringify([
+          {
+            symbol: '',
+            timeframe: '',
+            model: '',
+            strategy: '',
+            stopLoss: '',
+          },
+        ])
+      )
+    }
+  }, [])
   // ---- Function ----
   const compareTable = () => {
     const symbolOnly = showData.map((item) => item.symbol)
