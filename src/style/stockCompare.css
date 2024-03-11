@@ -32,6 +32,7 @@
   display: flex;
   margin-top: 64px;
   margin-left: calc(100% / 11.87);
+  justify-content: space-between;
 }
 .strategy-lot-button-active {
   width: 123px;
@@ -62,4 +63,37 @@
   color: #9b9ea3;
   cursor: pointer;
   text-align: center;
+}
+/* .backtest-label {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  margin-left: calc(100% / 11.87);
+  margin-right: calc(100% / 9.98);
+  margin-top: 72px;
+} */
+.group-tab {
+  display: flex;
+}
+.strategy-dot {
+  display: flex;
+  width: 283px;
+  justify-content: space-around;
+  margin-right: calc(100% / 9.98);
+  color: #ffffff;
+  font-size: 20px;
+}
+.strategy-dot .buy-dot {
+  height: 25px;
+  width: 25px;
+  background-color: #a2d08c;
+  border-radius: 50%;
+  display: inline-block;
+}
+.strategy-dot .sell-dot {
+  height: 25px;
+  width: 25px;
+  background-color: #fc3c33;
+  border-radius: 50%;
+  display: inline-block;
 }

@@ -33,25 +33,33 @@ function StockCompare({
       <PricePredict symbol={symbol} timeframe={timeframe} model={model} />
       <BacktestModel symbol={symbol} timeframe={timeframe} model={model} />
       <div className="select-tab-backtest">
-        <div
-          onClick={handleStrategyClick}
-          className={
-            isStrategy
-              ? 'strategy-lot-button-active'
-              : 'strategy-lot-button-inactive'
-          }
-        >
-          Strategy
+        <div className="group-tab">
+          <div
+            onClick={handleStrategyClick}
+            className={
+              isStrategy
+                ? 'strategy-lot-button-active'
+                : 'strategy-lot-button-inactive'
+            }
+          >
+            Strategy
+          </div>
+          <div
+            onClick={handleListOfTradeClick}
+            className={
+              !isStrategy
+                ? 'strategy-lot-button-active'
+                : 'strategy-lot-button-inactive'
+            }
+          >
+            List Of Trade
+          </div>
         </div>
-        <div
-          onClick={handleListOfTradeClick}
-          className={
-            !isStrategy
-              ? 'strategy-lot-button-active'
-              : 'strategy-lot-button-inactive'
-          }
-        >
-          List Of Trade
+        <div className="strategy-dot">
+          <span className="buy-dot"></span>
+          Buy Signal
+          <span className="sell-dot"></span>
+          Sell Signal
         </div>
       </div>
       <BacktestStrategy

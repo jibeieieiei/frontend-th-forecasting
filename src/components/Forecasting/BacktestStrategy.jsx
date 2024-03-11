@@ -69,13 +69,13 @@ function BacktestStrategy({
         data: greenSignal,
         type: 'scatter',
         smooth: true,
-        color: '#02FF00',
+        color: '#a2d08c',
       },
       {
         data: redSignal,
         type: 'scatter',
         smooth: true,
-        color: '#FF0000',
+        color: '#FC3C33',
       },
     ],
     dataZoom: [
