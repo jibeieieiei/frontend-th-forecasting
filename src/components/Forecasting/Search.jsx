@@ -19,6 +19,9 @@ function Search({ setShowData, setIsForecast }) {
     },
   ])
   useEffect(() => {
+    setNumber(JSON.parse(localStorage.getItem('compare')).length)
+  }, [])
+  useEffect(() => {
     const data = JSON.parse(localStorage.getItem('compare'))
     const minLength =
       compare.length < data.length ? compare.length : data.length
@@ -318,19 +321,19 @@ function Search({ setShowData, setIsForecast }) {
                   name: 'stop-loss',
                   i: i,
                   value: '2',
-                  label: 'Stop Loss 2/ Take Profit 4',
+                  label: 'Stop Loss 2%/ Take Profit 4%',
                 },
                 {
                   name: 'stop-loss',
                   i: i,
                   value: '4',
-                  label: 'Stop Loss 4/ Take Profit 8',
+                  label: 'Stop Loss 4%/ Take Profit 8%',
                 },
                 {
                   name: 'stop-loss',
                   i: i,
                   value: '6',
-                  label: 'Stop Loss 6/ Take Profit 12',
+                  label: 'Stop Loss 6%/ Take Profit 12%',
                 },
               ]}
               value={compare[i].stopLoss ? compare[i].stopLoss : null}
