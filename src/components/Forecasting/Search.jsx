@@ -284,6 +284,7 @@ function Search({ setShowData, setIsForecast }) {
               onChange={(value, index) => {
                 handleChange(index)
               }}
+              listHeight={160}
               dropdownStyle={{
                 width: 260,
                 border: '1px solid #FFFFFF',
@@ -297,6 +298,27 @@ function Search({ setShowData, setIsForecast }) {
                   label: 'EMA Golden Cross',
                 },
                 { name: 'strategy', i: i, value: 'RSI', label: 'RSI' },
+                { name: 'strategy', i: i, value: 'MACD', label: 'MACD' },
+                { name: 'strategy', i: i, value: 'ADX', label: 'ADX' },
+                {
+                  name: 'strategy',
+                  i: i,
+                  value: 'BBANDS',
+                  label: 'Bollinger Bands',
+                },
+                { name: 'strategy', i: i, value: 'BH', label: 'Buy & Hold' },
+                {
+                  name: 'strategy',
+                  i: i,
+                  value: 'STO',
+                  label: 'Stochastic Oscillator',
+                },
+                {
+                  name: 'strategy',
+                  i: i,
+                  value: 'TSL',
+                  label: 'Trailing Stop Loss',
+                },
               ]}
               value={compare[i].strategy ? compare[i].strategy : null}
             />

@@ -24,7 +24,13 @@
 .arima-container,
 .lstm-container,
 .rsi-container,
-.ema-container {
+.ema-container,
+.macd-container,
+.adx-container,
+.bbands-container,
+.sto-container,
+.tsl-container,
+.bh-container {
   display: flex;
   flex-direction: column;
   width: calc(100% / 2.15);
@@ -36,7 +42,13 @@
 .arima-header,
 .lstm-header,
 .rsi-header,
-.ema-header {
+.ema-header,
+.macd-header,
+.adx-header,
+.bbands-header,
+.sto-header,
+.tsl-header,
+.bh-header {
   font-size: 36px;
   font-weight: 600;
   background: linear-gradient(270deg, #3083ff 0%, #ffffff 100%);
@@ -46,7 +58,13 @@
 .arima-info,
 .lstm-info,
 .rsi-info,
-.ema-info {
+.ema-info,
+.macd-info,
+.adx-info,
+.bbands-info,
+.sto-info,
+.tsl-info,
+.bh-info {
   font-size: 18px;
   font-weight: 400;
 }

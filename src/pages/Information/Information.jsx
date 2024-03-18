@@ -36,6 +36,38 @@ Readings below 30 generally indicate that the stock is oversold, while readings 
  The exponential moving average is also referred to as the exponentially weighted moving average. An exponentially weighted moving average reacts more significantly to recent price changes than a simple moving average simple moving average (SMA), which applies an equal weight to all observations in the period.`}
           </div>
         </div>
+        <div className="macd-container">
+          <div className="macd-header">MACD INDICATOR</div>
+          <div className="macd-info">
+            {`Moving average convergence/divergence (MACD) is a technical indicator to help investors identify price trends, measure trend momentum, and identify market entry points for buying or selling. Moving average convergence/divergence (MACD) is a trend-following momentum indicator that shows the relationship between two exponential moving averages (EMAs) of a security’s price. MACD was developed in the 1970s by Gerald Appel`}
+          </div>
+        </div>
+        <div className="adx-container">
+          <div className="adx-header">ADX INDICATOR</div>
+          <div className="adx-info">
+            {`The Average Directional Index (or ADX indicator) is a technical tool designed to measure the strength of a market trend. The ADX indicator is used for various purposes, such as measuring trend strength, as a trend and range finder, and as a filter for different Forex trading strategies.`}
+          </div>
+        </div>
+        <div className="bbands-container">
+          <div className="bbands-header">BOLLINGER BANDS INDICATOR</div>
+          <div className="bbands-info">
+            {`A Bollinger Band® is a technical analysis tool defined by a set of trendlines. They are plotted as two standard deviations, both positively and negatively, away from a simple moving average (SMA) of a security's price and can be adjusted to user preferences. Bollinger Bands® was developed by technical trader John Bollinger and designed to give investors a higher probability of identifying when an asset is oversold or overbought.`}
+          </div>
+        </div>
+        <div className="bh-container">
+          <div className="bh-header">BUY AND HOLD</div>
+          <div className="bh-info">{`Buy stocks at the beginning of the year and sell them at the end of the year.`}</div>
+        </div>
+        <div className="sto-container">
+          <div className="sto-header">STOCHASTIC INDICATOR</div>
+          <div className="sto-info">
+            {`A stochastic oscillator is a momentum indicator comparing a particular closing price of a security to a range of its prices over a certain period of time. The sensitivity of the oscillator to market movements is reducible by adjusting that time period or by taking a moving average of the result. It is used to generate overbought and oversold trading signals, utilizing a 0–100 bounded range of values.`}
+          </div>
+        </div>
+        <div className="tsl-container">
+          <div className="tsl-header">TRAILING STOP LOSS</div>
+          <div className="tsl-info">{`A trailing stop is a modification of a typical stop order that can be set at a defined percentage or dollar amount away from a security's current market price. For a long position, an investor places a trailing stop loss below the current market price. For a short position, an investor places the trailing stop above the current market price.`}</div>
+        </div>
       </div>
     </div>
   )
