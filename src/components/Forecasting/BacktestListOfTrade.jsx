@@ -131,7 +131,7 @@ function BacktestListOfTrade({
             const local = {
               key: i + 1,
               direction: item[symbol + '_direction'],
-              fees: item[symbol + '_fees'],
+              fees: item[symbol + '_fees'].toFixed(2),
               pnl: item[symbol + '_pnl'].toFixed(2),
               price: item[symbol + '_price'].toFixed(2),
               return: item[symbol + '_return'].toFixed(2),
