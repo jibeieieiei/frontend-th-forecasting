@@ -53,6 +53,28 @@ function CompareTable(props) {
               }
             })
           )
+          if (
+            [
+              'change',
+              'percentChange',
+              'totalValue',
+              'pe',
+              'pbv',
+              'bookValuePerShare',
+              'dividendYield',
+              'marketCap',
+              'turnoverRatio',
+              'beta',
+              'dividendPayoutRatio',
+              'averageValue',
+            ].includes(tempData['title'])
+          ) {
+            for (let i = 0; i < symbols.length; i++) {
+              console.log(symbols[i].toLowerCase())
+              const symb = symbols[i].toLowerCase()
+              tempData[symb] = parseFloat(tempData[symb]).toFixed(2)
+            }
+          }
           arrayData = arrayData.concat(tempData)
         }
         setData(arrayData)
