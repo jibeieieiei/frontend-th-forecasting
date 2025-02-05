@@ -13,3 +13,6 @@ Currently, two official plugins are available:
 2. Clone this project.
 3. Installing package using `npm i`
 4. Run the program by `npm run dev`
+
+### Backend 
+https://github.com/jibeieieiei/backend-thesis
